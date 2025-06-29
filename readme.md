@@ -7,6 +7,7 @@ Authentication: Using Clerk
 DB: postgresql
 ORM: Sequelize
 Used Redis for caching the products for /get route
+Implemented Role based Access Control using Auth0
 
 Schema: favourites, shoeImages, shoes, shoeVariants, sizes
 
@@ -51,6 +52,9 @@ Screenshots:
 ![Alt Text](./src/assets/variants.png)
 
 Routes implemented:
+User Routes
+
+```
 api/user/get-all-products
 api/user/get-by-Id/:id
 api/user/get-by-variantId/:id
@@ -58,7 +62,11 @@ api/user/addToFavourites/:shoeId
 api/user/getFavourites
 api/user/checkFavourite/:id
 api/user/removeFavourite/:productId
+```
 
+Admin Routes
+
+```
 api/v1/addProduct
 api/v1/addColor
 api/v1/removeColor
@@ -67,3 +75,4 @@ api/v1/addSize
 api/v1/removeSize
 api/v1/uploadImage
 api/v1/get-variants-by-shoeId/:shoeId
+```
